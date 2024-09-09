@@ -1,0 +1,54 @@
+tiles:
+  floor:
+    name: Floor
+    color: [200, 200, 200]
+    attributes:
+      - name: passable
+        value: true
+      - name: terrain_type
+        value: ground
+  glass:
+    name: Glass
+    color: [200, 255, 200]
+    attributes:
+      - name: passable
+        value: true
+      - name: terrain_type
+        value: ground
+  dirt:
+    name: dirt
+    color: [224, 211, 200]
+    attributes:
+      - name: passable
+        value: true
+      - name: terrain_type
+        value: ground
+  wall:
+    name: Wall
+    color: [100, 100, 100]
+    attributes:
+      - name: passable
+        value: false
+      - name: terrain_type
+        value: solid
+  water:
+    name: Water
+    color: [0, 0, 255]
+    attributes:
+      - name: passable
+        value: false
+      - name: terrain_type
+        value: liquid
+
+generation_params:
+  diamond_square:
+    roughness: 0.2
+  generate_map:
+    water_threshold: 0.2
+    floor_threshold: 0.5
+  cellular_automata:
+    iterations: 5
+    water_to_floor_threshold: 4
+    floor_to_water_threshold: 2
+    floor_to_wall_threshold: 4
+    wall_to_floor_threshold: 5
